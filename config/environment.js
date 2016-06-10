@@ -4,6 +4,8 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'quora-ember',
     environment: environment,
+    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+    firebase: 'https://quoracopy.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -12,6 +14,7 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
+
 
     APP: {
       // Here you can pass flags/options to your application instance
