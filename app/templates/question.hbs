@@ -1,12 +1,20 @@
 <div class="question-detail">
-<p>
-  {{question.title}}
-  {{question.content}}
-</p>
-<ul>
-  <li>{{question.notes}}</li>
-  <li>{{question.author}}</li>
-</ul>
+  <p>
+    {{model.title}}
+    {{model.content}}
+  </p>
+  <ul>
+    <li>{{model.notes}}</li>
+    <li>{{model.author}}</li>
+  </ul>
 
+</div>
+<div id="answers">
+  {{new-answer qestion = model saveAnswer="saveAnswer"}}
+
+</div>
+<div class="edits">
+  {{update-question question = model updateQuestion="updateQuestion"}}
+  <button {{action 'delete' question}}>Delete this question</button>
 
 </div>
