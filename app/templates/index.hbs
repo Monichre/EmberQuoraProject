@@ -1,7 +1,22 @@
-<h1>Welcome to Quora</h1>
-<div id="questions">
-  {{#each model.questions as |question|}}
-    {{question-tile question = question}}
-  {{/each}}
+
+
+<div id="new-question">
   {{new-question question = model.questions save="save"}}
+</div>
+
+
+
+<div id="questions">
+  <h1>Latest Questions</h1>
+  <div class="questions">
+    {{#each model.questions as |question|}}
+      {{question-tile question = question}}
+    {{/each}}
+  </div>
+</div>
+
+
+<div id="categories">
+  <h1>Categories</h1>
+
 </div>

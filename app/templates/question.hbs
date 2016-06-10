@@ -1,20 +1,25 @@
 <div class="question-detail">
-  <p>
-    {{model.title}}<br>
-    {{model.content}}
-  </p>
-  <li>{{model.notes}}</li>
-  <li>{{model.author}}</li>
+  <div class="question-detail-content">
+    <h3>{{model.title}}</h3>
+    <p>
 
-</div>
-<div id="answers">
-  {{#each model.answers as |answer|}}
-    {{answer-tile answer=answer}}
-  {{/each}}
-  {{new-answer question = model saveAnswer="saveAnswer"}}
+      {{model.content}}
+    </p>
+    <li>Notes:{{model.notes}}</li>
+    <li>From: {{model.author}}</li>
+    <div id="answers">
+      {{#each model.answers as |answer|}}
+        {{answer-tile answer=answer}}
+      {{/each}}
+      {{new-answer question = model saveAnswer="saveAnswer"}}
 
-</div>
-<div class="edits">
-  {{update-question question = model updateQuestion="updateQuestion"}}
-  <button {{action 'delete' question}}>Delete this question</button>
+    </div>
+    <div class="edits">
+      {{update-question question = model updateQuestion="updateQuestion"}}
+      <button {{action 'delete' question}}>Delete this question</button>
+    </div>
+  </div>
+
+
+
 </div>

@@ -13,9 +13,10 @@ export default Ember.Route.extend({
       newAnswer.save().then(function(){
         return question.save();
       });
-      this.transition('article', params.article);
+      this.transition('question', params.question);
     },
     updateQuestion(question, params) {
+      debugger;
       Object.keys(params).forEach(function(key){
         if(params[key]!== undefined){
           question.set(key, params[key]);

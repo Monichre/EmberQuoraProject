@@ -1,12 +1,4 @@
-/**
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    contenteditable attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that are clearfixed.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+
 .cf:before,
 .cf:after {
     content: " "; /* 1 */
@@ -17,10 +9,6 @@
     clear: both;
 }
 
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
 .cf {
     *zoom: 1;
 }
@@ -48,14 +36,13 @@ nav {
 }
 
 ul {
-  width: 50%;
+  width: inherit;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   list-style-type: none;
   position: absolute;
   bottom: 0;
-  /*padding: 0;*/
   margin: 0;
 }
 
@@ -69,20 +56,86 @@ li{
   margin: 2px;
 
 }
-
-h1 {
+h1, h3 {
   text-align: center;
+}
+header h1 {
+  text-align: center;
+  position: relative;
+  right: 24%;
+  font-size: 50px;
+}
+span{
+  color: white;
+}
+
+#container {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: 2%;
 }
 
 #questions {
-  width: 75%;
+  width: 50%;
   display: block;
   margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
+#questions h1 {
+  text-align: center;
+}
+.questions {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1%;
+
+}
 .question {
-  width: 33.333%;
+  height: 150px;
+  width: 100%;
+  display: block;
+  border: 1px solid black;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#new-question {
+  width: 20%;
+  display: block;
+  text-align: center;
+}
+
+#categories {
+  width: 20%;
+}
+
+button {
+  text-align: center;
+}
+.question-detail {
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+.question-detail-content{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.question-detail-content li {
+  list-style-type: none;
+  text-align: center;
+  margin: auto;
+  background-color: inherit;
+  color: black;
+}
+.edits {
+  display: inline-block;
 }
