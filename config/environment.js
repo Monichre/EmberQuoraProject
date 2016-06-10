@@ -5,7 +5,12 @@ module.exports = function(environment) {
     modulePrefix: 'quora-ember',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'https://quoracopy.firebaseio.com/',
+    firebase: {
+      apiKey: "AIzaSyDUXl4vK3Ylgme-KtDQBiM8xOH4u39kEk0",
+      authDomain: "quoracopy.firebaseapp.com",
+      databaseURL: "https://quoracopy.firebaseio.com",
+      storageBucket: "quoracopy.appspot.com",
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

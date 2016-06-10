@@ -1,0 +1,21 @@
+body {
+  margin: auto;
+  display: block;
+}
+
+h1 {
+  text-align: center;
+}
+
+#questions {
+  width: 75%;
+  display: block;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.question {
+  width: 33.333%;
+}
