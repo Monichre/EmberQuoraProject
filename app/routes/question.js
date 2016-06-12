@@ -16,7 +16,7 @@ export default Ember.Route.extend({
       this.transition('question', params.question);
     },
     updateQuestion(question, params) {
-      debugger;
+      // debugger;
       Object.keys(params).forEach(function(key){
         if(params[key]!== undefined){
           question.set(key, params[key]);
