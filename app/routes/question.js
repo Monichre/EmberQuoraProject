@@ -25,9 +25,9 @@ export default Ember.Route.extend({
        question.save();
        this.transitionTo('index');
     },
-    delete(question){
+    delete(model){
       if(confirm("Are you sure you want to delete this question?")){
-        question.destroyRecord();
+        model.destroyRecord();
         this.transitionTo('index');
       }
     }
