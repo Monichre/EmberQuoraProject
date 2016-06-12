@@ -136,6 +136,40 @@ button {
   background-color: inherit;
   color: black;
 }
-.edits {
-  display: inline-block;
+.edits{
+  width: 100%;
+  margin-top: 5%!important;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+.edits button {
+  float: left;
+  width: 33.333%;
+  margin: auto;
+  text-align: center;
+}
+
+.answers {
+  box-shadow: 2px 2px 2px black:
+}
+
+.answerForm {
+  display: block;
+  margin: auto;
+  margin-top: 2%!important;
+  position: absolute;;
+  left: 45%;
+
+}
+.answerForm button {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+ h1 {
+  text-align: center;
+  margin: auto;
+
 }

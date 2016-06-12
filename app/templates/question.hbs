@@ -8,15 +8,17 @@
     <li>Notes:{{model.notes}}</li>
     <li>From: {{model.author}}</li>
     <div id="answers">
+      <h3>Answers:</h3>
       {{#each model.answers as |answer|}}
         {{answer-tile answer=answer}}
       {{/each}}
-      {{new-answer question = model saveAnswer="saveAnswer"}}
+
 
     </div>
-    <div class="edits">
+    <div class="edits cf">
       {{update-question question = model updateQuestion="updateQuestion"}}
       <button {{action 'delete' model}}>Delete this question</button>
+      {{new-answer question = model saveAnswer="saveAnswer"}}
     </div>
   </div>
 
